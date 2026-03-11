@@ -1,2 +1,8 @@
-# 2026_GameEnginelntro
+# 2026\_GameEnginelntro
+
 게임엔집입문 프로젝트
+
+2026137028 이준서
+
+안녕하세여 케케케
+
