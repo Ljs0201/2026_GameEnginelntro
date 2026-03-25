@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class playerController : MonoBehaviour
 {
     private Vector2 moveInput;
@@ -47,5 +48,18 @@ public class playerController : MonoBehaviour
         }
             transform.Translate(Vector3.right * moveSpeed * moveInput.x * Time.deltaTime);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.name == "Death")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            SceneManager.LoadScene("PlayScene_" + collision.name);
+        }
+            
     }
 }
